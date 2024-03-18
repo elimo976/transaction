@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+.card{
+    height: 22rem;
+}
+#btnTrash {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: 10%;
+    bottom: 8%;
+}
+#btnEdit {
+    position: absolute;
+    right: 10%;
+    bottom: 4%;
+}

@@ -1,0 +1,17 @@
+<div class="col" *ngIf="transaction">
+    <div class="card">
+        <div class="card-body"
+            [ngClass]="{'bg-success': transaction.type== 'invoice', 'bg-secondary': transaction.type=='withdrawal'}">
+            <h5 class="card-title">{{transaction.business}}</h5>
+            <p class="card-text">{{transaction.name}}</p>
+            <p class="card-text">Account: {{transaction.account}}</p>
+            <p class="card-text">Date: {{transaction.date | date}}</p>
+            <p class="card-text">Type: {{transaction.type}}</p>
+            <p class="card-text" [ngClass]="{'bg-warning': transaction.amount >=700}">Amount: {{transaction.amount |
+                currency}}</p>
+            <button type="button" id="btnTrash" class="btn btn-outline-dark" (click)="deleteTransaction()">
+                <i class="bi bi-trash"></i>
+            </button>
+        </div>
+    </div>
+</div>
